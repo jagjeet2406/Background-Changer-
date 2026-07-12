@@ -1,15 +1,21 @@
-console.log("JavaScript Loaded");
-const buttons = document.querySelectorAll('button')
-console.log(buttons);
-const body = document.body;
+// console.log("JavaScript Loaded");
+// const buttons = document.querySelectorAll('button')
+// const body = document.body;
 
- buttons.forEach((button ) => {
+//  buttons.forEach((button ) => {
     
-    button.addEventListener('click', ()=>{
+//     button.addEventListener('click', ()=>{
 
-        body.style.backgroundColor = button.id;
+//         body.style.backgroundColor = button.id;
 
-    });
- });
+//     });
+//  });
+
+const body = document.getElementById('main')
+body.addEventListener('click',(event)=> {
+    if( event.target.tagName === 'BUTTON')
+     document.body.style.backgroundColor = event.target.id;
+
+})
 
  
